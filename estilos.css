@@ -1,0 +1,92 @@
+/* COLORES UNAD */
+:root{
+    --naranja:#F7941D;
+    --azul:#003366;
+    --blanco:#ffffff;
+}
+
+/* RESET */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+.header{
+    background: var(--azul);
+    color: var(--blanco);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 30px;
+}
+
+.header h1{
+    margin:0;
+    font-size:22px;
+}
+
+.header span{
+    color: var(--naranja);
+}
+
+/* CONTENIDO */
+.contenido{
+    padding:20px;
+    text-align:center;
+}
+
+.formulario input{
+    padding:10px;
+    margin:5px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.formulario button{
+    padding:10px 15px;
+    background: var(--naranja);
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.formulario button:hover{
+    background:#d97f12;
+}
+
+/* TABLA */
+table{
+    width:80%;
+    margin:20px auto;
+    border-collapse: collapse;
+    background:white;
+}
+
+th{
+    background: var(--azul);
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+/* FOOTER */
+.footer{
+    background: var(--azul);
+    color:white;
+    text-align:center;
+    padding:15px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.footer span{
+    color: var(--naranja);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ControlHTA Comunitario</title>
+<link rel="icon" href="UNAD.ico" type="image/x-icon">
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<div class="header">
+<h1>
+  <img src="UNAD.png" alt="Logo" width="50">&nbsp;
+  <span>ControlHTA</span> Comunitario
+</h1>
+    <div>Universidad Nacional Abierta y a Distancia</div>
+</div>
+
+<!-- CONTENIDO -->
+<div class="contenido">
+
+<h2>Registro de Pacientes</h2>
+
+<div class="formulario">
+    <input type="text" id="nombre" placeholder="Nombre del paciente">
+    <input type="number" id="sistolica" placeholder="Presión Sistólica">
+    <input type="number" id="diastolica" placeholder="Presión Diastólica">
+    <button onclick="registrar()">Registrar</button>
+</div>
+
+<h2>📊 Registros</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Presión</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 <span>UNAD</span> | Proyecto Comunitario HTA | Tu salud es primero <br>
+    Desarrollado por: Manuel Ricardo Chamorro Ruano
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
