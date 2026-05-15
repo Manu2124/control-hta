@@ -80,6 +80,13 @@ onclick="descargarPDF(${paciente.id})">
 </button>
 </td>
 
+<td>
+<button class="btn-hc"
+onclick="abrirHistoria(${paciente.id})">
+🩺 Historia
+</button>
+</td>
+
 </tr>
 `;
 
