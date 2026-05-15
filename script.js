@@ -74,10 +74,17 @@ let fila = `
 <td>${fecha}</td>
 
 <td>
+
 <button class="btn-pdf-tabla"
 onclick="descargarPDF(${paciente.id})">
 📄 PDF
 </button>
+
+<button class="btn-hc"
+onclick="abrirHC(${paciente.id})">
+📋 HC
+</button>
+
 </td>
 </tr>
 `;
