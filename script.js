@@ -212,8 +212,6 @@ document.getElementById("modalHC").style.display = "none";
 
 function guardarHC(){
 
-function guardarHC(){
-
 const { jsPDF } = window.jspdf;
 const doc = new jsPDF();
 
