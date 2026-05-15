@@ -239,97 +239,59 @@ transform:scale(0.95);
 
 }
 
-/* MODAL */
+/* HEADER MODAL */
 
-.modal{
-
-display:none;
-position:fixed;
-z-index:1000;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-
-}
-
-.modal-content{
-
-background:white;
-margin:3% auto;
-padding:25px;
-width:90%;
-max-width:700px;
-border-radius:20px;
-animation:modalEntrada 0.3s;
-
-}
-
-@keyframes modalEntrada{
-
-from{
-transform:scale(0.8);
-opacity:0;
-}
-
-to{
-transform:scale(1);
-opacity:1;
-}
-
-}
-
-.cerrar{
-
-float:right;
-font-size:30px;
-cursor:pointer;
-font-weight:bold;
-
-}
-
-#formHC{
+.modal-header{
 
 display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:20px;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
 
 }
 
-#formHC input,
-#formHC select,
-#formHC textarea{
+/* BOTON CERRAR */
 
-padding:12px;
-border-radius:10px;
-border:1px solid #ccc;
+.cerrar-btn{
+
+background:#ef4444;
+color:white;
+border:none;
+width:40px;
+height:40px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+transition:0.3s;
 
 }
 
-#formHC textarea{
+.cerrar-btn:hover{
 
-resize:none;
-height:90px;
+background:#dc2626;
+transform:rotate(90deg);
 
 }
+
+/* BOTON GUARDAR HC */
 
 .guardarHC{
 
-background:#2563eb;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
 color:white;
 border:none;
-padding:14px;
-border-radius:10px;
+padding:15px;
+border-radius:12px;
 cursor:pointer;
 font-size:16px;
+font-weight:bold;
+transition:0.3s;
 
 }
 
 .guardarHC:hover{
 
-background:#1d4ed8;
+transform:scale(1.03);
 
 }
 
