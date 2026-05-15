@@ -196,3 +196,17 @@ flex-direction:column;
 }
 
 }
+
+.pdf-btn{
+background:#16a34a;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.pdf-btn:hover{
+background:#15803d;
+}
