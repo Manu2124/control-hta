@@ -306,3 +306,83 @@ background:#1d4ed8;
 transform:scale(1.05);
 
 }
+
+/* BOTON HC */
+
+.btn-hc{
+
+background:#2563eb;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+.btn-hc:hover{
+
+background:#1d4ed8;
+transform:scale(1.05);
+
+}
+
+/* MODAL */
+
+.modal{
+
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+
+}
+
+.modal-contenido{
+
+background:white;
+margin:5% auto;
+padding:30px;
+width:80%;
+max-width:700px;
+border-radius:20px;
+position:relative;
+animation:aparecer 0.3s ease;
+
+}
+
+@keyframes aparecer{
+
+from{
+transform:scale(0.8);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+.cerrar{
+
+position:absolute;
+right:20px;
+top:15px;
+font-size:30px;
+cursor:pointer;
+color:red;
+
+}
+
+.cerrar:hover{
+
+transform:scale(1.2);
+
+}
