@@ -142,6 +142,7 @@ doc.text("Este reporte fue generado por el sistema ControlHTA Comunitario.", 20,
 
 doc.text("Proyecto académico de innovación en salud - UNAD", 20, 180);
 
+
 // FOOTER
 
 doc.setFillColor(31,41,55);
