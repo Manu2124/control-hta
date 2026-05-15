@@ -204,9 +204,13 @@ document.getElementById("recomendaciones").value = "";
 
 }
 
+function cerrarModal(){
+
 document.getElementById("modalHC").style.display = "none";
 
 }
+
+function guardarHC(){
 
 function guardarHC(){
 
