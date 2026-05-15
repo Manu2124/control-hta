@@ -221,12 +221,20 @@ border-radius:8px;
 cursor:pointer;
 font-size:14px;
 transition:0.3s;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
 
 }
 
 .btn-pdf-tabla:hover{
 
 background:#15803d;
-transform:scale(1.05);
+transform:scale(1.08);
+cursor:pointer;
+
+}
+
+.btn-pdf-tabla:active{
+
+transform:scale(0.95);
 
 }
