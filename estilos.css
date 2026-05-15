@@ -239,37 +239,77 @@ transform:scale(0.95);
 
 }
 
-/* HEADER MODAL */
+/* MODAL */
 
-.modal-header{
+.modal{
+
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+
+}
+
+/* CONTENIDO MODAL */
+
+.modal-content{
+
+background:white;
+margin:3% auto;
+padding:25px;
+width:90%;
+max-width:700px;
+border-radius:20px;
+animation:modalEntrada 0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+/* ANIMACION */
+
+@keyframes modalEntrada{
+
+from{
+transform:scale(0.8);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* FORMULARIO HC */
+
+#formHC{
 
 display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:20px;
+flex-direction:column;
+gap:15px;
 
 }
 
-/* BOTON CERRAR */
+#formHC input,
+#formHC select,
+#formHC textarea{
 
-.cerrar-btn{
-
-background:#ef4444;
-color:white;
-border:none;
-width:40px;
-height:40px;
-border-radius:50%;
-cursor:pointer;
-font-size:18px;
-transition:0.3s;
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:15px;
 
 }
 
-.cerrar-btn:hover{
+#formHC textarea{
 
-background:#dc2626;
-transform:rotate(90deg);
+resize:none;
+height:90px;
 
 }
 
