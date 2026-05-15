@@ -225,3 +225,92 @@ function cerrarModal(){
 document.getElementById("modalHC").style.display = "none";
 
 }
+
+function guardarHC(){
+
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+
+// DATOS FORMULARIO
+
+let edad =
+document.getElementById("edad").value;
+
+let sexo =
+document.getElementById("sexo").value;
+
+let peso =
+document.getElementById("peso").value;
+
+let talla =
+document.getElementById("talla").value;
+
+let antecedentes =
+document.getElementById("antecedentes").value;
+
+let sintomas =
+document.getElementById("sintomas").value;
+
+let observaciones =
+document.getElementById("observaciones").value;
+
+let recomendaciones =
+document.getElementById("recomendaciones").value;
+
+// HEADER
+
+doc.setFillColor(0,91,187);
+
+doc.rect(0,0,220,30,'F');
+
+doc.setTextColor(255,255,255);
+
+doc.setFontSize(22);
+
+doc.text("Historia Clínica Digital", 20, 18);
+
+// BODY
+
+doc.setTextColor(0,0,0);
+
+doc.setFontSize(13);
+
+doc.text(`Paciente: ${pacienteActual.nombre}`, 20, 50);
+
+doc.text(`Presión: ${pacienteActual.sis}/${pacienteActual.dia}`, 20, 62);
+
+doc.text(`Estado Clínico: ${pacienteActual.estado}`, 20, 74);
+
+doc.text(`Edad: ${edad}`, 20, 90);
+
+doc.text(`Sexo: ${sexo}`, 20, 102);
+
+doc.text(`Peso: ${peso}`, 20, 114);
+
+doc.text(`Talla: ${talla}`, 20, 126);
+
+// TEXTOS GRANDES
+
+doc.text("Antecedentes:", 20, 145);
+doc.text(antecedentes || "-", 20, 155);
+
+doc.text("Síntomas:", 20, 175);
+doc.text(sintomas || "-", 20, 185);
+
+doc.text("Observaciones:", 20, 205);
+doc.text(observaciones || "-", 20, 215);
+
+doc.text("Recomendaciones:", 20, 235);
+doc.text(recomendaciones || "-", 20, 245);
+
+// FOOTER
+
+doc.setFillColor(31,41,55);
+
+doc.rect(0,270,220,30,'F');
+
+// DESCARGA
+
+doc.save(`HC_${pacienteActual.nombre}.pdf`);
+
+}
