@@ -101,9 +101,16 @@
 
 <div class="modal-content">
 
-<span class="cerrar" onclick="cerrarModal()">&times;</span>
+<div class="modal-header">
 
 <h2>📋 Historia Clínica</h2>
+
+<button class="cerrar-btn"
+onclick="cerrarModal()">
+✖
+</button>
+
+</div>
 
 <form id="formHC">
 
@@ -113,40 +120,42 @@
 
 <input type="text" id="hcEstado" readonly>
 
-<input type="number" placeholder="Edad">
+<input type="number" id="edad" placeholder="Edad">
 
-<select>
-<option>Sexo</option>
+<select id="sexo">
+<option value="">Sexo</option>
 <option>Masculino</option>
 <option>Femenino</option>
 </select>
 
-<input type="text" placeholder="Peso">
+<input type="text" id="peso" placeholder="Peso">
 
-<input type="text" placeholder="Talla">
+<input type="text" id="talla" placeholder="Talla">
 
-<textarea placeholder="Antecedentes médicos"></textarea>
+<textarea id="antecedentes"
+placeholder="Antecedentes médicos"></textarea>
 
-<textarea placeholder="Síntomas"></textarea>
+<textarea id="sintomas"
+placeholder="Síntomas"></textarea>
 
-<textarea placeholder="Observaciones"></textarea>
+<textarea id="observaciones"
+placeholder="Observaciones"></textarea>
 
-<textarea placeholder="Recomendaciones"></textarea>
+<textarea id="recomendaciones"
+placeholder="Recomendaciones"></textarea>
 
-<button type="button" class="guardarHC">
-💾 Guardar Historia Clínica
+<button type="button"
+class="guardarHC"
+onclick="guardarHC()">
+
+💾 Guardar y Descargar HC
+
 </button>
 
 </form>
 
 </div>
 
-</div>
-
-</form>
-
-</div>
-  
 </div>
 
 <!-- FOOTER -->
