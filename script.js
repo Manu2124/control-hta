@@ -4,6 +4,9 @@ let altos = 0;
 let bajos = 0;
 
 let pacientes = [];
+let pacienteActual = null;
+
+// REGISTRAR PACIENTES
 
 function registrar(){
 
@@ -12,8 +15,10 @@ let sis = parseInt(document.getElementById("sistolica").value);
 let dia = parseInt(document.getElementById("diastolica").value);
 
 if(nombre === "" || isNaN(sis) || isNaN(dia)){
+
 alert("Complete todos los campos");
 return;
+
 }
 
 let estado = "";
@@ -55,6 +60,7 @@ document.getElementById("alerta").innerHTML = mensaje;
 let fecha = new Date().toLocaleString();
 
 let paciente = {
+
 id: pacientes.length,
 nombre,
 sis,
@@ -62,40 +68,56 @@ dia,
 estado,
 mensaje,
 fecha
+
 };
 
 pacientes.push(paciente);
 
 let fila = `
+
 <tr>
+
 <td>${nombre}</td>
+
 <td>${sis}/${dia}</td>
+
 <td class="${clase}">${estado}</td>
+
 <td>${fecha}</td>
 
 <td>
 
 <button class="btn-pdf-tabla"
 onclick="descargarPDF(${paciente.id})">
+
 📄 PDF
+
 </button>
 
 <button class="btn-hc"
 onclick="abrirHC(${paciente.id})">
+
 📋 HC
+
 </button>
 
 </td>
+
 </tr>
+
 `;
 
 document.getElementById("tabla").innerHTML += fila;
+
+// LIMPIAR CAMPOS
 
 document.getElementById("nombre").value = "";
 document.getElementById("sistolica").value = "";
 document.getElementById("diastolica").value = "";
 
 }
+
+// DESCARGAR PDF REPORTE
 
 function descargarPDF(id){
 
@@ -107,9 +129,11 @@ const doc = new jsPDF();
 // HEADER
 
 doc.setFillColor(0,91,187);
+
 doc.rect(0,0,220,30,'F');
 
 doc.setTextColor(255,255,255);
+
 doc.setFontSize(22);
 
 doc.text("ControlHTA Comunitario", 20, 18);
@@ -140,26 +164,19 @@ doc.text(`Resultado: ${paciente.mensaje}`, 20, 115);
 
 doc.text(`Fecha: ${paciente.fecha}`, 20, 130);
 
-// MENSAJE
-
-doc.setFontSize(11);
-
-doc.text("Este reporte fue generado por el sistema ControlHTA Comunitario 2026", 20, 170);
-
-doc.text("Proyecto académico de innovación en salud - UNAD", 20, 180);
-
-
 // FOOTER
 
 doc.setFillColor(31,41,55);
 
 doc.rect(0,270,220,30,'F');
 
-// GUARDAR
+// DESCARGAR
 
 doc.save(`Reporte_${paciente.nombre}.pdf`);
 
-let pacienteActual = null;
+}
+
+// ABRIR HISTORIA CLINICA
 
 function abrirHC(id){
 
@@ -202,11 +219,15 @@ document.getElementById("recomendaciones").value = "";
 
 }
 
+// CERRAR MODAL
+
 function cerrarModal(){
 
 document.getElementById("modalHC").style.display = "none";
 
 }
+
+// GUARDAR HC PDF
 
 function guardarHC(){
 
@@ -271,18 +292,22 @@ doc.text(`Peso: ${peso}`, 20, 114);
 
 doc.text(`Talla: ${talla}`, 20, 126);
 
-// TEXTOS GRANDES
+// TEXTOS
 
 doc.text("Antecedentes:", 20, 145);
+
 doc.text(antecedentes || "-", 20, 155);
 
 doc.text("Síntomas:", 20, 175);
+
 doc.text(sintomas || "-", 20, 185);
 
 doc.text("Observaciones:", 20, 205);
+
 doc.text(observaciones || "-", 20, 215);
 
 doc.text("Recomendaciones:", 20, 235);
+
 doc.text(recomendaciones || "-", 20, 245);
 
 // FOOTER
@@ -291,7 +316,7 @@ doc.setFillColor(31,41,55);
 
 doc.rect(0,270,220,30,'F');
 
-// DESCARGA
+// DESCARGAR HC
 
 doc.save(`HC_${pacienteActual.nombre}.pdf`);
 
