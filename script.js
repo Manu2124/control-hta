@@ -183,3 +183,45 @@ function cerrarModal(){
 document.getElementById("modalHC").style.display = "none";
 
 }
+
+let pacienteActual = null;
+
+function abrirHC(id){
+
+let paciente = pacientes[id];
+
+pacienteActual = paciente;
+
+// ABRIR MODAL
+
+document.getElementById("modalHC").style.display = "block";
+
+// DATOS AUTOMATICOS
+
+document.getElementById("hcNombre").value =
+`Paciente: ${paciente.nombre}`;
+
+document.getElementById("hcPresion").value =
+`Presión: ${paciente.sis}/${paciente.dia}`;
+
+document.getElementById("hcEstado").value =
+`Estado: ${paciente.estado}`;
+
+// LIMPIAR FORMULARIO
+
+document.getElementById("edad").value = "";
+document.getElementById("sexo").value = "";
+document.getElementById("peso").value = "";
+document.getElementById("talla").value = "";
+document.getElementById("antecedentes").value = "";
+document.getElementById("sintomas").value = "";
+document.getElementById("observaciones").value = "";
+document.getElementById("recomendaciones").value = "";
+
+}
+
+function cerrarModal(){
+
+document.getElementById("modalHC").style.display = "none";
+
+}
