@@ -161,6 +161,14 @@ doc.save(`Reporte_${paciente.nombre}.pdf`);
 
 }
 
+let pacienteActual = null;
+
+function abrirHC(id){
+
+let paciente = pacientes[id];
+
+pacienteActual = paciente;
+
 // ABRIR MODAL
 
 document.getElementById("modalHC").style.display = "block";
@@ -179,17 +187,22 @@ document.getElementById("hcEstado").value =
 // LIMPIAR FORMULARIO
 
 document.getElementById("edad").value = "";
+
 document.getElementById("sexo").value = "";
+
 document.getElementById("peso").value = "";
+
 document.getElementById("talla").value = "";
+
 document.getElementById("antecedentes").value = "";
+
 document.getElementById("sintomas").value = "";
+
 document.getElementById("observaciones").value = "";
+
 document.getElementById("recomendaciones").value = "";
 
 }
-
-function cerrarModal(){
 
 document.getElementById("modalHC").style.display = "none";
 
