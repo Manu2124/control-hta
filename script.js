@@ -138,9 +138,9 @@ doc.text(`Fecha: ${paciente.fecha}`, 20, 130);
 
 doc.setFontSize(11);
 
-doc.text("Este documento fue generado por el sistema", 20, 170);
+doc.text("Este reporte fue generado por el sistema ControlHTA Comunitario.", 20, 170);
 
-doc.text("ControlHTA Comunitario - UNAD", 20, 180);
+doc.text("Proyecto académico de innovación en salud - UNAD", 20, 180);
 
 // FOOTER
 
