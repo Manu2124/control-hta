@@ -79,14 +79,6 @@ onclick="descargarPDF(${paciente.id})">
 📄 PDF
 </button>
 </td>
-
-<td>
-<button class="btn-hc"
-onclick="abrirHistoria(${paciente.id})">
-🩺 Historia
-</button>
-</td>
-
 </tr>
 `;
 
@@ -159,33 +151,5 @@ doc.rect(0,270,220,30,'F');
 // GUARDAR
 
 doc.save(`Reporte_${paciente.nombre}.pdf`);
-
-}
-
-function abrirHistoria(id){
-
-const paciente = pacientes[id];
-
-document.getElementById("modalHC").style.display = "block";
-
-document.getElementById("datosPaciente").innerHTML = `
-
-<p><strong>Paciente:</strong> ${paciente.nombre}</p>
-
-<p><strong>Presión Arterial:</strong> ${paciente.sis}/${paciente.dia}</p>
-
-<p><strong>Estado:</strong> ${paciente.estado}</p>
-
-<p><strong>Fecha:</strong> ${paciente.fecha}</p>
-
-<hr><br>
-
-`;
-
-}
-
-function cerrarModal(){
-
-document.getElementById("modalHC").style.display = "none";
 
 }
