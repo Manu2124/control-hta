@@ -159,8 +159,6 @@ doc.rect(0,270,220,30,'F');
 
 doc.save(`Reporte_${paciente.nombre}.pdf`);
 
-}
-
 let pacienteActual = null;
 
 function abrirHC(id){
