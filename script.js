@@ -161,37 +161,6 @@ doc.save(`Reporte_${paciente.nombre}.pdf`);
 
 }
 
-function abrirHC(id){
-
-let paciente = pacientes[id];
-
-document.getElementById("modalHC").style.display = "block";
-
-document.getElementById("hcNombre").value =
-`Paciente: ${paciente.nombre}`;
-
-document.getElementById("hcPresion").value =
-`Presión: ${paciente.sis}/${paciente.dia}`;
-
-document.getElementById("hcEstado").value =
-`Estado: ${paciente.estado}`;
-
-}
-
-function cerrarModal(){
-
-document.getElementById("modalHC").style.display = "none";
-
-}
-
-let pacienteActual = null;
-
-function abrirHC(id){
-
-let paciente = pacientes[id];
-
-pacienteActual = paciente;
-
 // ABRIR MODAL
 
 document.getElementById("modalHC").style.display = "block";
