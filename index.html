@@ -1,56 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ControlHTA Comunitario</title>
+
 <link rel="icon" href="UNAD.ico" type="image/x-icon">
 <link rel="stylesheet" href="estilos.css">
+
 </head>
 
 <body>
 
-<!-- ENCABEZADO -->
-<div class="header">
-<h1>
-  <img src="UNAD.png" alt="Logo" width="50">&nbsp;
-  <span>ControlHTA</span> Comunitario
-</h1>
-    <div>Universidad Nacional Abierta y a Distancia</div>
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="logo-container">
+<img src="UNAD.png" alt="Logo UNAD">
+<div>
+<h1>ControlHTA <span>Comunitario</span></h1>
+<p>Sistema Digital de Monitoreo de Hipertensión</p>
 </div>
+</div>
+
+</header>
+
+<!-- DASHBOARD -->
+
+<section class="cards">
+
+<div class="card">
+<h3>👥 Pacientes</h3>
+<p id="totalPacientes">0</p>
+</div>
+
+<div class="card normal-card">
+<h3>🟢 Normales</h3>
+<p id="normales">0</p>
+</div>
+
+<div class="card alta-card">
+<h3>🔴 Altos</h3>
+<p id="altos">0</p>
+</div>
+
+<div class="card baja-card">
+<h3>🟠 Bajos</h3>
+<p id="bajos">0</p>
+</div>
+
+</section>
 
 <!-- CONTENIDO -->
+
 <div class="contenido">
 
-<h2>Registro de Pacientes</h2>
+<h2>🩺 Registro de Pacientes</h2>
 
 <div class="formulario">
-    <input type="text" id="nombre" placeholder="Nombre del paciente">
-    <input type="number" id="sistolica" placeholder="Presión Sistólica">
-    <input type="number" id="diastolica" placeholder="Presión Diastólica">
-    <button onclick="registrar()">Registrar</button>
+
+<input type="text" id="nombre" placeholder="Nombre del paciente">
+
+<input type="number" id="sistolica" placeholder="Presión Sistólica">
+
+<input type="number" id="diastolica" placeholder="Presión Diastólica">
+
+<button onclick="registrar()">Registrar Paciente</button>
+
 </div>
 
-<h2>📊 Registros</h2>
+<!-- ALERTA -->
+
+<div id="alerta"></div>
+
+<h2>📊 Historial Clínico</h2>
 
 <table>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Presión</th>
-            <th>Estado</th>
-        </tr>
-    </thead>
-    <tbody id="tabla"></tbody>
+
+<thead>
+<tr>
+<th>Paciente</th>
+<th>Presión</th>
+<th>Estado</th>
+<th>Fecha</th>
+</tr>
+</thead>
+
+<tbody id="tabla"></tbody>
+
 </table>
 
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-    © 2026 <span>UNAD</span> | Proyecto Comunitario HTA | Tu salud es primero <br>
-    Desarrollado por: Manuel Ricardo Chamorro Ruano
-</div>
+
+<footer class="footer">
+
+<p>
+© 2026 UNAD | Proyecto Comunitario HTA
+</p>
+
+<p>
+Desarrollado por: Manuel Ricardo Chamorro Ruano
+</p>
+
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
